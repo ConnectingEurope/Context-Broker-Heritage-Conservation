@@ -5,7 +5,7 @@
 
 The **Context Broker Heritage Conservation** is a **project** made up of different components that help public organisations monitor the state of their historical heritage, detect anomalies and take preventive actions using Context Broker as the main core. It provides the following features:
 
-- **Real-time data** visualisation through geo-localized sensors on a map, based on the information from the **Orion LD Context Broker**.
+- **Real-time data** visualisation through geo-localised sensors on a map, based on the information from the **Orion LD Context Broker**.
 
 - **Historical data** visualisation for the sensors in table and graph formats, taking advantage of historical data tools like **Kibana**.
 

@@ -1,0 +1,13 @@
+<div class="row filterButtons py-3">
+    <div class="col-6">
+        <h4 class="mb-2 my-auto display-4">{{currentDashboard}} dashboard</h4>
+    </div>
+    <div class="my-auto col-6">
+        <button class="btn text-white mx-1 float-right" (click)="changeDashboard('exterior')">Exterior dashboard</button>
+        <button class="btn text-white mx-1 float-right" (click)="changeDashboard('daily')">Indoor Daily</button>
+        <button class="btn text-white mx-1 float-right" (click)="changeDashboard('monthly')">Indoor Monthly</button>
+        <button class="btn text-white mx-1 float-right" (click)="changeDashboard('annual')">Indoor Annual</button>
+    </div>
+
+</div>
+<iframe [src]="dashboardRef" class="w-100" scrolling="auto" frameBorder="0"></iframe>

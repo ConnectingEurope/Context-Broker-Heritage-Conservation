@@ -1,0 +1,206 @@
+<div class="rounded-lg bg-light overlay info mt-2 mr-3">
+    <h2 class="text-center mt-3">Information</h2>
+    <hr class="w-100">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container mx-4 overlay rounded-lg bg-light py-1 my-2">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <h4 class="text-left mt-2">Occupation</h4>
+                    </div>
+                    <div class="col-12">
+                        <div class="mx-auto">
+                            <div class="rounded-circle float-left mb-2 mr-2"
+                            [ngClass]="{'low' : buildingEntity.peopleOccupancy < 170,
+                                        'medium' : buildingEntity.peopleOccupancy >=170 && buildingEntity.peopleOccupancy < 334,
+                                        'high' : buildingEntity.peopleOccupancy >= 334 && buildingEntity.peopleOccupancy < 500}"></div>
+                            <h3 class="text-left mt-0 font-weight-normal">{{buildingEntity.peopleOccupancy}}/{{buildingEntity.peopleCapacity}}</h3>
+                        </div> 
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="w-100 py-2 occupancy-legend mx-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><p>Low</p></div>
+                    <div class="col"><p class="text-center">Medium</p></div>
+                    <div class="col"><p class="text-right">High</p></div>
+                </div>                 
+            </div>
+        </div>
+        <div class="row">
+            <div class="container mx-4 overlay rounded-lg bg-light py-1 my-2">
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="text-left align-middle mt-2">Air Quality Index</h4>
+                    </div>
+                    <div class="col-12 mx-auto">
+                        <div class="rounded-circle float-left mr-2" 
+                        [ngClass]="{'very-good' : airQualityEntity.airQualityLevel=== 'very good',
+                                    'good' : airQualityEntity.airQualityLevel=== 'good',
+                                    'medium' : airQualityEntity.airQualityLevel=== 'medium',
+                                    'poor' : airQualityEntity.airQualityLevel=== 'poor',
+                                    'very-poor' : airQualityEntity.airQualityLevel=== 'very poor',
+                                    'bg-danger' : airQualityEntity.airQualityLevel=== 'extreme'}"></div>
+                        <h3 class="text-left mt-0 font-weight-normal">{{ airQualityEntity.airQualityIndex}} - {{airQualityEntity.airQualityLevel}}</h3>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col"><p class="text-center mb-0">Good</p></div>
+                    <div class="col"><p class="mb-0 ml-3">Poor</p></div>
+                </div>   
+                <div class="row">
+                    <div class="w-100 py-2 legend mx-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><p>Very good</p></div>
+                    <div class="col"><p class="text-center">Medium</p></div>
+                    <div class="col"><p class="text-right">Very poor</p></div>
+                </div>                       
+            </div>
+        </div>
+        <h4 class="text-center mt-3">Indoor conditions</h4>
+        <ul class="nav nav-tabs w-100" id="myTab" role="tablist" data-tabs="tabs">
+            <li class="nav-item w-50" role="presentation">
+              <a class="nav-link active text-center" id="church-tab" data-toggle="tab" href="#church" role="tab" aria-controls="church" aria-selected="true">Central</a>
+            </li>
+            <li class="nav-item w-50" role="presentation">
+              <a class="nav-link text-center" id="capille-tab" data-toggle="tab" href="#capille" role="tab" aria-controls="capille" aria-selected="false">Capille</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="church" role="tabpanel" aria-labelledby="church-tab">
+                <div class="row">
+                    <div class="container mx-4 mb-3">
+                        <div class="row">
+                            <div class="container overlay rounded-lg bg-light py-1 my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4 class="text-left align-middle mt-2">TVOC</h4>
+                                    </div>
+                                    <div class="col-12 mx-auto">
+                                        <div class="rounded-circle float-left mr-2 mb-2"
+                                        [ngClass]="{'very-good' : centralEntity.tvocLevel=== 'very good',
+                                                    'good' : centralEntity.tvocLevel=== 'good',
+                                                    'medium' : centralEntity.tvocLevel=== 'medium',
+                                                    'poor' : centralEntity.tvocLevel=== 'poor',
+                                                    'very-poor' : centralEntity.tvocLevel=== 'very poor'}"></div>
+                                        <h3 class="text-left mt-0 font-weight-normal">{{centralEntity.tvoc}} - {{centralEntity.tvocLevel}}</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col"><p class="text-center mb-0">Good</p></div>
+                                    <div class="col"><p class="mb-0 ml-3">Poor</p></div>
+                                </div>   
+                                <div class="row">
+                                    <div class="w-100 py-2 legend mx-4"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"><p>Very good</p></div>
+                                    <div class="col"><p class="text-center">Medium</p></div>
+                                    <div class="col"><p class="text-right">Very poor</p></div>
+                                </div>                
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="container overlay rounded-lg bg-light py-1 my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4 class="text-left align-middle mt-2">CO2 level</h4>
+                                    </div>
+                                    <div class="col-12 mx-auto">
+                                        <div class="rounded-circle float-left mr-2 mb-2"
+                                        [ngClass]="{'very-good' : centralEntity.co2Level=== 'very good',
+                                                    'good' : centralEntity.co2Level=== 'good',
+                                                    'medium' : centralEntity.co2Level=== 'medium',
+                                                    'poor' : centralEntity.co2Level=== 'poor',
+                                                    'very-poor' : centralEntity.co2Level=== 'very poor'}"></div>
+                                        <h3 class="text-left mt-0 font-weight-normal">{{centralEntity.co2}} - {{centralEntity.co2Level}}</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col"><p class="text-center mb-0">Good</p></div>
+                                    <div class="col"><p class="mb-0 ml-3">Poor</p></div>
+                                </div>   
+                                <div class="row">
+                                    <div class="w-100 py-2 legend mx-4"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"><p>Very good</p></div>
+                                    <div class="col"><p class="text-center">Medium</p></div>
+                                    <div class="col"><p class="text-right">Very poor</p></div>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="capille" role="tabpanel" aria-labelledby="capille-tab">
+                <div class="row">
+                    <div class="container mx-4 mb-3">
+                        <div class="row">
+                            <div class="container overlay rounded-lg bg-light py-1 my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4 class="text-left align-middle mt-2">TVOC level</h4>
+                                    </div>
+                                    <div class="col-12 mx-auto">
+                                        <div class="rounded-circle float-left mr-2 mb-2"
+                                        [ngClass]="{'very-good' : capilleEntity.tvocLevel=== 'very good',
+                                                    'good' : capilleEntity.tvocLevel=== 'good',
+                                                    'medium' : capilleEntity.tvocLevel=== 'medium',
+                                                    'poor' : capilleEntity.tvocLevel=== 'poor',
+                                                    'very-poor' : capilleEntity.tvocLevel=== 'very poor'}"></div>
+                                        <h3 class="text-left mt-0 font-weight-normal">{{capilleEntity.tvoc}} - {{capilleEntity.tvocLevel}}</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col"><p class="text-center mb-0">Good</p></div>
+                                    <div class="col"><p class="mb-0 ml-3">Poor</p></div>
+                                </div>   
+                                <div class="row">
+                                    <div class="w-100 py-2 legend mx-4"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"><p>Very good</p></div>
+                                    <div class="col"><p class="text-center">Medium</p></div>
+                                    <div class="col"><p class="text-right">Very poor</p></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="container overlay rounded-lg bg-light py-1 my-2">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4 class="text-left align-middle mt-2">CO2 level</h4>
+                                    </div>
+                                    <div class="col-12 mx-auto">
+                                        <div class="rounded-circle float-left mr-2 mb-2"
+                                        [ngClass]="{'very-good' : capilleEntity.co2Level=== 'very good',
+                                                    'good' : capilleEntity.co2Level=== 'good',
+                                                    'medium' : capilleEntity.co2Level=== 'medium',
+                                                    'poor' : capilleEntity.co2Level=== 'poor',
+                                                    'very-poor' : capilleEntity.co2Level=== 'very poor'}"></div>
+                                        <h3 class="text-left mt-0 font-weight-normal">{{capilleEntity.co2}} - {{capilleEntity.co2Level}}</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col"><p class="text-center mb-0">Good</p></div>
+                                    <div class="col"><p class="mb-0 ml-3">Poor</p></div>
+                                </div>   
+                                <div class="row">
+                                    <div class="w-100 py-2 legend mx-4"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"><p>Very good</p></div>
+                                    <div class="col"><p class="text-center">Medium</p></div>
+                                    <div class="col"><p class="text-right">Very poor</p></div>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+</div> 

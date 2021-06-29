@@ -265,7 +265,7 @@ The icons that appear on the map correspond to a list of categories that classif
 
 If more information about these categories is needed, the FIWARE data models can be consulted through this [link](https://www.fiware.org/developers/data-models/).
 
-Whenever a geo-localized sensor is selected on the map, an information panel with the sensor’s information will appear. This panel will contain the attributes that were selected while configuring the Context Broker instance along with the real time data they have available.
+Whenever a geo-localised sensor is selected on the map, an information panel with the sensor’s information will appear. This panel will contain the attributes that were selected while configuring the Context Broker instance along with the real time data they have available.
 
 ![PopupAttributes](../img/PopupAttributes.png)
 >*Illustration 25. Example of pop-up attributes.*

@@ -3,6 +3,7 @@
 ![License](https://img.shields.io/github/license/ConnectingEurope/Context-Broker-Data-Visualisation)
 ![NGSI LD](https://img.shields.io/badge/NGSI-LD-red.svg)
 
+**Please note that support questions will not be monitored during the summer period of July and August. **
 
 The **Context Broker Heritage Conservation** is a **project** made up of different components that help public organisations monitor the state of their historical heritage, detect anomalies and take preventive actions using Context Broker as the main core. It provides the following features:
 
